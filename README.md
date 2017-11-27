@@ -1,12 +1,36 @@
-# teradata-kmeans
-Dynamically calculate the sum of error squared for each cluster based on the output of the Teradata K-Means UDF.
+# Teradata K-Means - Calculate Cluster Withinness
 
-A User Defined Function to run K-Means in Teradata can be found here: https://developer.teradata.com/extensibility/articles/implementing-a-multiple-input-stream-teradata-15-0-table-operator-for-k-means
+Clustering can be in done in Teradatabe using the K-Means UDF. This function requires knowing a value of k. In this project we calculate the withinness of a cluster: The sum of the squared distance between each item and its cluster centroid. This can be done for various k and then plotted to observe the elbow effect of where withinness stops drastically decreasing as we add clusters. This allows for choosing a value for K. 
 
-A clustering test data set can be found here: [test](https://archive.ics.uci.edu/ml/machine-learning-databases/00235/)
+## Getting Started
 
-[Prepare Demo Datasets](test_data_set_up.sql): create the base table for test data set loading and for cleansing and sampling this data set
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-[Withinness Stored Procedure](sum_error_squared_sp.sql): stored procedure code for calculating the sum of error squared in each cluster
+### Prerequisites
 
-[Demo](run_and_interpret_results.sql): sample of how to use the stored procedure on our sample data set
+* The Teradata K-Means UDF which can be downloaded [here](https://developer.teradata.com/extensibility/articles/implementing-a-multiple-input-stream-teradata-15-0-table-operator-for-k-means)
+* Details and testing examples on this function can be found [here](http://developer.teradata.com/extensibility/articles/k-means-clustering-and-teradata-14-10-table-operators-0)
+
+### Installing
+
+Use Teradata Studio, SQL Assistant, BTEQ, or another SQL interface tool install the stored procedure by running [this replace statement](sum_error_squared_sp.sql) while connected to a Teradata system. You must have create procedure permissions. 
+
+## Testing the Stored Procedure
+
+Download [this sample dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00235/) to run the sample demos.
+
+1. Load this data set to Teradata using Teradata Studio or FastLoad
+2. [Prepare a sample of this data by formatting nulls and alterning data types](test_data_set_up.sql)
+3. [Run the procedure for various values of K to see the decrease in withinness](run_and_interpret_results.sql)
+4. Use excel (or an equivalent) to plot withinness as a line chart and more easily see the elbow effect 
+5. Choose a value of K for your clustering model
+
+## Authors
+
+* **Michelle Tanco** - *Initial work* - [PurpleBooth](https://github.com/mtanco)
+
+## Acknowledgments
+
+* Props to [Mike Watzke](http://downloads.teradata.com/user/watzke) for work on the K-Means UDF
+
+
