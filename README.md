@@ -27,7 +27,7 @@ Download [this sample dataset](https://archive.ics.uci.edu/ml/machine-learning-d
 
 ## Authors
 
-* [**Michelle Tanco**](https://github.com/mtanco) - *Initial work* - 
+* [Michelle Tanco](https://github.com/mtanco) - *Initial work* - michelle.tanco@thinkbiganalytics.com
 
 ## Acknowledgments
 
