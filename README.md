@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Use Teradata Studio, SQL Assistant, BTEQ, or another SQL interface tool install the stored procedure by running [this replace statement](sum_error_squared_sp.sql) while connected to a Teradata system. You must have create procedure permissions. 
+Use Teradata Studio, SQL Assistant, BTEQ, or another SQL interface tool to install the stored procedure by running [this replace statement](sum_error_squared_sp.sql) while connected to a Teradata system. You must have create procedure permissions. 
 
 ## Testing the Stored Procedure
 
