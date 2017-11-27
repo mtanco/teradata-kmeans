@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 * The Teradata K-Means UDF which can be downloaded [here](https://developer.teradata.com/extensibility/articles/implementing-a-multiple-input-stream-teradata-15-0-table-operator-for-k-means)
-* Details and testing examples on this function can be found [here](http://developer.teradata.com/extensibility/articles/k-means-clustering-and-teradata-14-10-table-operators-0)
+* Details and testing examples on the k-means function can be found [here](http://developer.teradata.com/extensibility/articles/k-means-clustering-and-teradata-14-10-table-operators-0)
 
 ### Installing
 
